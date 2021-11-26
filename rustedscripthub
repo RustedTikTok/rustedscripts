@@ -1,0 +1,220 @@
+-- Rusted Script Hub v1.0.0 (Open Source)
+local Player = game.Players.LocalPlayer
+local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1, false, 0)
+local MainHub = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local ScrollingBackground = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local ScriptLayout = Instance.new("Frame")
+local _1 = Instance.new("TextLabel")
+local ExeGV = Instance.new("TextButton")
+local BuyGV = Instance.new("TextButton")
+local AutoList = Instance.new("UIListLayout")
+local _2 = Instance.new("TextLabel")
+local ExeDC = Instance.new("TextButton")
+local BuyDC = Instance.new("TextButton")
+local Donate = Instance.new("TextButton")
+--Installation
+MainHub.Name = "MainHub"
+MainHub.Parent = game.CoreGui
+MainHub.ResetOnSpawn = false
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = MainHub
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.ClipsDescendants = true
+MainFrame.Position = UDim2.new(0.3499268, 0, 0.287623048, 0)
+MainFrame.Size = UDim2.new(0.300000012, 0, 0.421999991, 0)
+ScrollingBackground.Name = "ScrollingBackground"
+ScrollingBackground.Parent = MainFrame
+ScrollingBackground.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+ScrollingBackground.BorderSizePixel = 0
+ScrollingBackground.Size = UDim2.new(1, 0, 1, 0)
+ScrollingBackground.Image = "rbxassetid://7015538458"
+ScrollingBackground.ScaleType = Enum.ScaleType.Tile
+ScrollingBackground.TileSize = UDim2.new(0, 75, 0, 75)
+ScrollingBackground.Size = UDim2.new(1, ScrollingBackground.TileSize.X.Offset, 1, ScrollingBackground.TileSize.X.Offset)
+ScrollingBackground.Position = UDim2.new(0, -ScrollingBackground.TileSize.X.Offset, 0, -ScrollingBackground.TileSize.X.Offset)
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(1, 0, 0.100000001, 0)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "<b>Rusted Script Hub</b>"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.RichText = true
+Close.Name = "Close"
+Close.Parent = MainFrame
+Close.AnchorPoint = Vector2.new(0, 1)
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0, 0, 1, 0)
+Close.Size = UDim2.new(0.5, 0, 0.116999999, 0)
+Close.ZIndex = 2
+Close.Font = Enum.Font.SourceSansSemibold
+Close.Text = "<u>CLOSE</u>"
+Close.TextColor3 = Color3.fromRGB(170, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextStrokeTransparency = 0.000
+Close.TextWrapped = true
+Close.RichText = true
+ScriptLayout.Name = "ScriptLayout"
+ScriptLayout.Parent = MainFrame
+ScriptLayout.AnchorPoint = Vector2.new(0.5, 0.5)
+ScriptLayout.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptLayout.BackgroundTransparency = 1.000
+ScriptLayout.Position = UDim2.new(0.50000006, 0, 0.549999893, 0)
+ScriptLayout.Size = UDim2.new(1, 0, 0.899999976, 0)
+ScriptLayout.ZIndex = 2
+_1.Name = "1"
+_1.Parent = ScriptLayout
+_1.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+_1.BackgroundTransparency = 1.000
+_1.BorderSizePixel = 0
+_1.Size = UDim2.new(1, 0, 0.100000001, 0)
+_1.Font = Enum.Font.SourceSans
+_1.Text = "<b>   Greenville Fucker</b>"
+_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1.TextScaled = true
+_1.TextSize = 14.000
+_1.TextWrapped = true
+_1.TextXAlignment = Enum.TextXAlignment.Left
+_1.RichText = true
+ExeGV.Name = "ExeGV"
+ExeGV.Parent = _1
+ExeGV.AnchorPoint = Vector2.new(1, 0.5)
+ExeGV.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExeGV.BackgroundTransparency = 1.000
+ExeGV.Position = UDim2.new(1, 0, 0.5, 0)
+ExeGV.Size = UDim2.new(0.25, 0, 1, 0)
+ExeGV.ZIndex = 3
+ExeGV.Font = Enum.Font.SourceSansBold
+ExeGV.Text = "<b>EXECUTE</b>"
+ExeGV.TextColor3 = Color3.fromRGB(0, 155, 0)
+ExeGV.TextScaled = true
+ExeGV.TextSize = 14.000
+ExeGV.TextStrokeTransparency = 0.000
+ExeGV.TextWrapped = true
+ExeGV.RichText = true
+BuyGV.Name = "BuyGV"
+BuyGV.Parent = _1
+BuyGV.AnchorPoint = Vector2.new(1, 0.5)
+BuyGV.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BuyGV.BackgroundTransparency = 1.000
+BuyGV.Position = UDim2.new(0.75, 0, 0.5, 0)
+BuyGV.Size = UDim2.new(0.25, 0, 1, 0)
+BuyGV.ZIndex = 3
+BuyGV.Font = Enum.Font.SourceSansBold
+BuyGV.Text = "<b>BUY</b>"
+BuyGV.TextColor3 = Color3.fromRGB(0, 155, 0)
+BuyGV.TextScaled = true
+BuyGV.TextSize = 14.000
+BuyGV.TextStrokeTransparency = 0.000
+BuyGV.TextWrapped = true
+BuyGV.RichText = true
+AutoList.Name = "AutoList"
+AutoList.Parent = ScriptLayout
+AutoList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+AutoList.Padding = UDim.new(0.05, 0)
+_2.Name = "2"
+_2.Parent = ScriptLayout
+_2.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+_2.BackgroundTransparency = 1.000
+_2.BorderSizePixel = 0
+_2.Size = UDim2.new(1, 0, 0.100000001, 0)
+_2.Font = Enum.Font.SourceSans
+_2.Text = "<b>   Drive City Fucker</b>"
+_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+_2.TextScaled = true
+_2.TextSize = 14.000
+_2.TextWrapped = true
+_2.TextXAlignment = Enum.TextXAlignment.Left
+_2.RichText = true
+ExeDC.Name = "ExeDC"
+ExeDC.Parent = _2
+ExeDC.AnchorPoint = Vector2.new(1, 0.5)
+ExeDC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExeDC.BackgroundTransparency = 1.000
+ExeDC.Position = UDim2.new(1, 0, 0.5, 0)
+ExeDC.Size = UDim2.new(0.25, 0, 1, 0)
+ExeDC.ZIndex = 3
+ExeDC.Font = Enum.Font.SourceSansBold
+ExeDC.Text = "<b>EXECUTE</b>"
+ExeDC.TextColor3 = Color3.fromRGB(0, 155, 0)
+ExeDC.TextScaled = true
+ExeDC.TextSize = 14.000
+ExeDC.TextStrokeTransparency = 0.000
+ExeDC.TextWrapped = true
+ExeDC.RichText = true
+BuyDC.Name = "BuyDC"
+BuyDC.Parent = _2
+BuyDC.AnchorPoint = Vector2.new(1, 0.5)
+BuyDC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BuyDC.BackgroundTransparency = 1.000
+BuyDC.Position = UDim2.new(0.75, 0, 0.5, 0)
+BuyDC.Size = UDim2.new(0.25, 0, 1, 0)
+BuyDC.ZIndex = 3
+BuyDC.Font = Enum.Font.SourceSansBold
+BuyDC.Text = "<b>BUY</b>"
+BuyDC.TextColor3 = Color3.fromRGB(0, 155, 0)
+BuyDC.TextScaled = true
+BuyDC.TextSize = 14.000
+BuyDC.TextStrokeTransparency = 0.000
+BuyDC.TextWrapped = true
+BuyDC.RichText = true
+Donate.Name = "Donate"
+Donate.Parent = MainFrame
+Donate.AnchorPoint = Vector2.new(1, 1)
+Donate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Donate.BackgroundTransparency = 1.000
+Donate.Position = UDim2.new(1, 0, 1, 0)
+Donate.Size = UDim2.new(0.5, 0, 0.116999999, 0)
+Donate.ZIndex = 2
+Donate.Font = Enum.Font.SourceSansSemibold
+Donate.Text = "<u>DONATE</u>"
+Donate.TextColor3 = Color3.fromRGB(255, 170, 0)
+Donate.TextScaled = true
+Donate.TextSize = 14.000
+Donate.TextStrokeTransparency = 0.000
+Donate.TextWrapped = true
+Donate.RichText = true
+--Actions
+MainFrame.Draggable = true
+BuyGV.MouseButton1Click:Connect(function()
+	game:GetService("MarketplaceService"):PromptGamePassPurchase(Player,19009914)
+end)
+ExeGV.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RustedTikTok/rustedscripts/main/greenvillefucker",true))()
+	wait()
+	MainHub:Destroy()
+end)
+BuyDC.MouseButton1Click:Connect(function()
+	game:GetService("MarketplaceService"):PromptGamePassPurchase(Player,19287067)
+end)
+ExeDC.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RustedTikTok/rustedscripts/main/drivecityfucker",true))()
+	wait()
+	MainHub:Destroy()
+end)
+Donate.MouseButton1Click:Connect(function()
+	game:GetService("MarketplaceService"):PromptProductPurchase(Player,1188540540)
+end)
+Close.MouseButton1Click:Connect(function()
+	MainHub:Destroy()
+end)
+--Animated Background
+local scrollTween = tweenService:Create(ScrollingBackground, tweenInfo, {
+	Position = UDim2.new(0, 0, 0, 0)
+})
+local function scroll()
+	scrollTween:Play()
+end
+scroll()
